@@ -1,0 +1,32 @@
+@import 'scss/all-utilities';
+
+.currency-settings-form {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   max-width: 28.125rem;
+   margin: 0 auto;
+
+   .SingleDatePickerInput {
+      text-align: left;
+   }
+
+   .form-group, .form-group > * {
+      width: 100%;
+   }
+
+   .form-group .DateInput__block {
+      width: 130px;
+   }
+}
+
+// 550px
+@media (min-width: 550px) {
+   .currency-settings-form {
+      flex-direction: row;
+   
+      .form-group, .form-group > * {
+         max-width: 11.875rem;
+      }
+   }
+}

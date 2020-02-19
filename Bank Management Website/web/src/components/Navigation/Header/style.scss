@@ -1,0 +1,69 @@
+@import 'scss/all-utilities';
+
+// Navigation header
+.navigation-header {
+   display: flex;
+   flex-direction: column;
+   // justify-content: space-between;
+   text-align: center;
+}
+
+.user-profile-box {
+   margin-bottom: 0.9375rem;
+
+   img {
+      display: none;
+      border-radius: 50%;
+      margin-right: 0.75rem;
+   }
+}
+
+.navigation-header-links {
+   @include reset-ul();
+   display: flex;
+   align-items: center;
+   text-align: center;
+   margin: 0 auto;
+
+   li {
+      margin: 0 0.75rem;
+   }
+}
+
+.toggle-menu {
+   button {
+      font-size: 1.171875rem;
+      border: 0;
+      background: 0;
+   }
+}
+
+@include media-breakpoint-up(md) {
+   .navigation-header {
+      margin-bottom: 2.5rem;
+   }
+   
+   .toggle-menu {
+      display: none;
+   }
+}
+
+// 500px
+@media (min-width: 500px) {
+   .user-profile-box {
+      margin-bottom: 0;
+
+      img {
+         display: inline;
+      }
+   }
+
+   .navigation-header {
+      justify-content: space-between;
+      flex-direction: row;
+   }
+
+   .navigation-header-links {
+      margin: 0;
+   }
+}

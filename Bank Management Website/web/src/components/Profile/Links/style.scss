@@ -1,0 +1,54 @@
+@import 'scss/all-utilities';
+
+.profile-links {
+   display: flex;
+   flex-direction: column;
+   box-shadow: 0 0 4.0625rem $navy-box-shadow;
+   margin-left: 0;
+   margin-right: 0;
+
+   a {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding: 0.9375rem 0.3125rem;
+      text-decoration: none;
+
+      &, &:hover {
+         text-decoration: none;
+      }
+
+      &:hover {
+         background-image: linear-gradient(to right, $light-blue 0%, $dark-blue 100%);
+
+         i, span {
+            color: #fff;
+         }
+      }
+   }
+
+   i {
+      color: $dark-blue;
+      font-size: 2.5rem;
+      line-height: 1;
+      margin-bottom: 0.625rem;
+   }
+
+   span {
+      color: #c9d4eb;
+      text-transform: uppercase;
+      font-size: 0.875rem;
+   }
+}
+
+// 360px
+@media (min-width: 360px) {
+   .profile-links {
+      flex-direction: row;
+
+      a {
+         padding: 1.875rem 0.3125rem;
+      }
+   }
+}

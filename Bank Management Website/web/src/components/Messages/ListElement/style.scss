@@ -1,0 +1,52 @@
+.messages-list-item {
+   &.list-group-item {
+      display: flex;
+
+      &:disabled, &.disabled {
+         pointer-events: initial;
+      }
+   }
+
+   flex-direction: column;
+   
+   aside {      
+      display: flex;
+      justify-content: center;
+      margin-top: 1.25rem;
+   }
+
+   .checkbox-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 2.8125rem;
+      width: 100%;
+      margin-right: 0.625rem;
+
+      input {
+         margin: 0;
+      }
+   }
+}
+
+// 460px
+@media (min-width: 460px) {
+   .messages-list-item {
+      flex-direction: row;
+      justify-content: space-between;
+
+      > aside {
+         max-width: 10rem;
+         width: 100%;
+         align-items: center;
+         padding-right: 0.9375rem;
+         margin-top: 0;
+      }
+
+      .checkbox-container {
+         max-width: 3.4375rem;
+         height: 100%;
+      }
+   }
+}
