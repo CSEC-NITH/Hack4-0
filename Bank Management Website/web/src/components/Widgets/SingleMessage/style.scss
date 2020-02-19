@@ -1,0 +1,77 @@
+@import 'scss/all-utilities';
+
+.message {
+   max-width: 22.8125rem;
+
+   &.module {
+      @include reset-module();
+   }
+}
+
+// Message header
+.message-header {
+   border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+   padding: 2.1875rem 1.5625rem;
+   margin-bottom: 2.1875rem;
+
+   h3 {
+      font-size: 1.125rem;
+      text-align: center;
+      margin: 0 0 2.1875rem;
+   }
+}
+
+.message-sender-info {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   img {
+      border-radius: 50%;
+      max-width: 5.125rem;
+      margin-bottom: 0.875rem;
+   }
+
+   div {
+      display: flex;
+      flex-direction: column;
+   }
+
+   span, strong {
+      font-size: 0.75rem;
+   }
+
+   span {
+      color: #c9d4eb;
+   }
+
+   strong {
+      color: $light-blue;
+   }
+}
+
+.message article {
+   color: $light-blue;
+   font-size: 0.75rem;
+   font-weight: 700;
+
+   padding: 0 1.5625rem;
+   margin-bottom: 2.1875rem;
+}
+
+// 360px
+@media (min-width: 360px) {
+   .message-header h3 {
+      text-align: left;
+   }
+
+   .message-sender-info {
+      flex-direction: row;
+
+      img {
+         margin-right: 1.4375rem;
+         margin-bottom: 0;
+         max-width: 2.5625rem;
+      }
+   }
+}

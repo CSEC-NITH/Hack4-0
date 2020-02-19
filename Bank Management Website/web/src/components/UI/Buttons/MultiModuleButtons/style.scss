@@ -1,0 +1,10 @@
+.multi-module-btns {
+   display: flex;
+
+   a, button {
+      flex: 1;
+      padding: 1.5625rem 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 700;
+   }
+}

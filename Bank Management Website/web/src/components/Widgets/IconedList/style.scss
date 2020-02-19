@@ -1,0 +1,78 @@
+@import 'scss/all-utilities';
+
+.iconed-list {
+   max-width: 22.8125rem;
+   
+   &.module {
+      @include reset-module();
+   }
+
+   ul {
+      @include reset-ul();
+   }
+
+   li {
+      border-bottom: 1px solid #e1e9fd;
+
+      &:last-child {
+         border: 0;
+      }
+
+      & > * {
+         display: flex;
+         flex-direction: column;
+         padding: 1rem 1.125rem;
+      }
+
+      & > a { text-decoration: none; }
+
+      & > a:hover {
+         background-image: linear-gradient(to right, $light-blue 0%, $dark-blue 100%);
+
+         span, strong {
+            color: #fff;
+         }
+      }
+   }
+
+   // List title/subtitle
+
+   .list-title, .list-subtitle {
+      font-size: 0.875rem;
+   }
+
+   .list-title {
+      color: $light-blue;
+
+      strong {
+         color: $dark-blue;
+      }
+   }
+
+   .list-subtitle {
+      color: #c9d4eb;
+   }
+}
+
+// 360px
+@media (min-width: 360px) {
+   .iconed-list {
+      li {
+         background: url('list-icon-image.svg') 1.875rem no-repeat;
+
+         > * {
+            padding: 1.5rem 1.125rem 1.5rem 5rem;
+         }
+      }
+
+      // List types
+
+      .list-type-image {
+         background-image: url('list-icon-image.svg');
+      }
+      
+      .list-type-comment {
+         background-image: url('list-icon-comment.svg');
+      }
+   }
+}
