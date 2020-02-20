@@ -1,0 +1,53 @@
+
+.div2 {
+	border-width: 1px;
+	 border-style:solid;
+	 border-width: medium;
+	 border-radius: 10px;
+	 height: 70px;
+	 box-shadow: 5px 5px 7px;
+}
+
+.div1
+{
+	margin: 20px;
+	
+}
+
+.div3
+{
+	margin-top:30px;
+	height: 200px;
+	background-color: #5F4B8BFF;
+	box-shadow: 10px 10px 8px 10px #888888;
+	border-radius: 20px;
+}
+
+.abc
+{
+	margin-top: 80px;
+	
+}
+.box1
+{
+	margin-right: -50px;
+	margin-left: -50px;
+}
+.ab
+{
+	column-gap: 10px;
+}
+.c
+{
+   background-color: #ffe3ed;
+   margin-top:76px;
+   height: 20px;
+}
+.dot{
+	height:90px;
+	width:90px;
+	background-color: #856285;
+	border-radius: 50%;
+	display:inline-block;
+	margin-left:15px;
+}
