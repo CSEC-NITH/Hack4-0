@@ -1,0 +1,46 @@
+@import 'scss/all-utilities';
+
+.profile-stats {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin-bottom: 0.625rem;
+   margin-left: 0.625rem;
+   margin-right: 0.625rem;
+
+   div {
+      flex: 1;
+      text-align: center;
+      margin-bottom: 1.25rem;
+   }
+
+   strong, span {
+      display: block;
+   }
+
+   strong {
+      font-size: 1.125rem;
+   }
+
+   span {
+      font-size: 0.875rem;
+      color: $light-gray;
+   }
+}
+
+// Stats colors
+.stats-acounts strong { color: $light-blue; }
+.stats-balance strong { color: $dark-blue; }
+.stats-messages strong { color: $light-blue; }
+
+// 360px
+@media (min-width: 360px) {
+   .profile-stats {
+      margin-bottom: 2rem;
+      flex-direction: row;
+
+      div {
+         margin-bottom: 0;
+      }
+   }
+}

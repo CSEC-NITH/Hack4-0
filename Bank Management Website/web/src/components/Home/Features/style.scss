@@ -1,0 +1,35 @@
+@import 'scss/all-utilities';
+
+.home-features {
+   display: flex;
+   justify-content: space-between;
+
+   .home-image, .home-text {
+      flex: 1;
+   }
+}
+
+.home-image { display: none; }
+
+.home-text { text-align: center; }
+
+.home-cta {
+   text-align: center;
+   margin-top: 1.25rem;
+}
+
+@include media-breakpoint-up(md) {
+   .home-image {
+      display: inline;
+
+      img {
+         margin-left: auto;
+         margin-right: auto;
+      }
+   }
+
+   .home-text {
+      margin-left: 1.5625rem;
+      text-align: left;
+   }
+}

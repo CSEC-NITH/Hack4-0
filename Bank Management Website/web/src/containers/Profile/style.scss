@@ -1,0 +1,9 @@
+@import 'scss/all-utilities';
+
+.profile {
+   max-width: 22.8125rem;
+
+   &.module {
+      @include reset-module();
+   }
+}
