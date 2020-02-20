@@ -1,0 +1,84 @@
+-- MySQL dump 10.13  Distrib 8.0.17, for Win64 (x86_64)
+--
+-- Host: localhost    Database: e_voting
+-- ------------------------------------------------------
+-- Server version	8.0.17
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `candidate_list`
+--
+
+DROP TABLE IF EXISTS `candidate_list`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `candidate_list` (
+  `candidate_id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `party` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`candidate_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `candidate_list`
+--
+
+LOCK TABLES `candidate_list` WRITE;
+/*!40000 ALTER TABLE `candidate_list` DISABLE KEYS */;
+INSERT INTO `candidate_list` VALUES (1000001,'A','SAAP'),(1000002,'B','DJP'),(1000003,'c','Rongress'),(1000004,'D','Independent'),(1000005,'E','NOTA');
+/*!40000 ALTER TABLE `candidate_list` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `voter_list`
+--
+
+DROP TABLE IF EXISTS `voter_list`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `voter_list` (
+  `voter_id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `password_hash` char(64) DEFAULT NULL,
+  `aadhar_id` bigint(20) DEFAULT NULL,
+  `dob` date DEFAULT NULL,
+  `contact_no` bigint(20) DEFAULT NULL,
+  `_key` char(32) DEFAULT NULL,
+  `voted` tinyint(4) DEFAULT NULL,
+  `verified` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`voter_id`),
+  UNIQUE KEY `aadhar_id` (`aadhar_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `voter_list`
+--
+
+LOCK TABLES `voter_list` WRITE;
+/*!40000 ALTER TABLE `voter_list` DISABLE KEYS */;
+INSERT INTO `voter_list` VALUES (11111211,'zzzz','d74ff0ee8da3b9806b18c877dbf29bbde50b5bd8e4dad7a3a725000feb82e8f1',111111111111,'2001-01-01',9876543211,'ba9e09661fb0744f187b0a4707fc075d',0,1),(12334411,'assd','d74ff0ee8da3b9806b18c877dbf29bbde50b5bd8e4dad7a3a725000feb82e8f1',123344,'2001-01-01',9876543211,'83ec4b063f7de0a733e4c0a720e6d3e7',0,0),(12334511,'assd','d74ff0ee8da3b9806b18c877dbf29bbde50b5bd8e4dad7a3a725000feb82e8f1',123345,'2001-01-01',9876543211,'a85c41eadbb95d589fa814a5b14fa5a4',0,1),(15181231,'Anshit','2d74712045d3cd2205ded7014d2c3f59fddc67db61225322ece63b83b9ca9ef8',48165615181,'2011-06-18',987516230,'ca1ea4adee51664923660dd05abb14f2',0,0),(22222789,'pppp','d74ff0ee8da3b9806b18c877dbf29bbde50b5bd8e4dad7a3a725000feb82e8f1',222222222222,'1999-02-16',123456788,'663bb759cc6128b3a2d828bc1090a64c',0,0),(43210210,'Khush','a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3',9876543210,'2000-01-16',9876543210,'13661aa8567a3ee55d44b4bc75b0d121',0,1),(55555456,'ansh','a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3',555555555555,'1999-10-13',123455,'ff60fda1df3b999a9be6e9cce0c5171f',0,0),(56526291,'jskebehs','8724193d29c30254b154b868da22aeb17df022bb62b21bc3724d3eb0aa47a24e',6461815154356526,'2011-12-14',6948156291,'6e13f25b11913ba86aa662c348ca6b78',0,0),(56554291,'jskebehs','8724193d29c30254b154b868da22aeb17df022bb62b21bc3724d3eb0aa47a24e',6461815154356554,'2011-12-14',6948156291,'2dbc4685d82b8f1af04e8cd2d438d1da',0,0),(56868668,'skskns','e00c65c2e0f2f8b5e809396c3f54b7e6f2399168723ed086963e3d482a39df5e',356656656868,'2031-02-16',6866868668,'77b31fa041c198b467c8f4167fb76a6b',0,0),(78912267,'sushant','f6ee94ecb014f74f887b9dcc52daecf73ab3e3333320cadd98bcb59d895c52f5',12345678912,'2007-11-05',9882416267,'e7a9acd41a10a86866a73cbd72ff1605',0,0),(89012890,'Anshit','a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3',123456789012,'1998-02-16',1234567890,'df96303b3c37aa7d9b405386d6a2de2d',0,1),(89123120,'Anshit','88685730f903ad622821482b3d5716fb54cd72cbd294eebfa74be195baa487bc',123456789123,'2000-01-12',9874563120,'aa5a88262e895ec9e7c549253741ad45',0,0),(1626164694,'sjsjshdb','f0a291a79a99ce859a47bc450e14b417977beb02effc2a59e326802005fb6475',16261646,'2016-01-13',646494993,'993acd91dfddaf8b9940938ea8bf5f0d',0,0);
+/*!40000 ALTER TABLE `voter_list` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2020-02-20  1:11:08
