@@ -1,0 +1,3 @@
+[submodule "Hack"]
+	path = Hack
+	url = https://github.com/basketcase03/Hack
