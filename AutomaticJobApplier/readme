@@ -1,0 +1,8 @@
+To use this application, please make a file named vars.py and add the following details
+
+USERNAME
+PASSWORD
+email
+phone
+cover_letter		# indeed asks for this
+exp			# dictionary object with string key mapped to years of experience
