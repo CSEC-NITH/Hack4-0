@@ -9,6 +9,6 @@ concentration dynamically.
 3. Blender Software with free edition for blending of the 3D models to be used in the project.
 4. Basics of Unity Engine to get hands on the scenes to be created.
 # Contributions
-1. Aryan verma CSE-1st Yr (Team Lead)
-2. Harshit Kaundal CSE-1st Yr
+1. Aryan verma CSE-1st Yr (Team Lead) 195011
+2. Harshit Kaundal CSE-1st Yr         195073
 3. Aarushi Sehgal CSE-Final Yr (Mentor)
