@@ -1,4 +1,6 @@
 # Statistical-Data-Analysis
+# Hack 4.0
+
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/raman08/Statistical-Data-Analysis)
 
 
@@ -77,9 +79,11 @@ Now just enter your Rollo and your progress is displayed
 [![LinkedIn](https://raw.githubusercontent.com/srbcheema1/CheemaFy/master/myPlugins/extra_things/png_images/social/linkedin-48x48.png)](https://www.linkedin.com/in/raman-preet-singh-314206195/)
 
 ## Contributors
-
-1. Anurag Verma 
-2. Ishan Aggarwal 
+### Team Members
+#### Team Omega
+1. Anurag Verma (Cse Dual)
+2. Raman Preet Singh (Chemical Engineering)
+3. Ishan Aggarwal (Ece Dual)
 
 ### Special Thanks 
 
